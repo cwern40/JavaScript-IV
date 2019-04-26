@@ -35,7 +35,9 @@ class Student extends Person {
         this.favSubjects = prop.favSubjects;
     }
     listsSubjects() {
-        return this.favSubjects;
+        this.favSubjects.forEach(function(element) {
+            console.log(element);
+        });
     }
     PRAssignment(subject) {
         return `${this.name} has submitted a PR for ${subject}`;
@@ -127,7 +129,7 @@ const matthew = new ProjectManager({
 console.log(bill);
 console.log(chris);
 console.log(robert);
-console.log(chris.listsSubjects());
+chris.listsSubjects();
 console.log(fox.sprintChallenge('CSS'));
 console.log(fox.PRAssignment('JavaScript'));
 console.log(bill.demo('Python'));
